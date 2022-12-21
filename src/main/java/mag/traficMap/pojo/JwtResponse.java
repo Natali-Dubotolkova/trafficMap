@@ -2,7 +2,6 @@ package mag.traficMap.pojo;
 
 import lombok.Getter;
 import lombok.Setter;
-import mag.traficMap.model.Role;
 
 import java.util.List;
 

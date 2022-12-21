@@ -1,4 +1,4 @@
-package mag.traficMap.model;
+package mag.traficMap.entity;
 
 public enum ERole {
     ROLE_USER,

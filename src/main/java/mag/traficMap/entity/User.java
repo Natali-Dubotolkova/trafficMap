@@ -1,6 +1,5 @@
-package mag.traficMap.model;
+package mag.traficMap.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -31,9 +30,6 @@ public class User implements Serializable {
     @JoinTable(name="user_roles", joinColumns = @JoinColumn(name="user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name="user_traffics", joinColumns = @JoinColumn(name="user_id"), inverseJoinColumns = @JoinColumn(name = "traffic_id"))
-    private Set<Traffic> traffics = new HashSet<>();
 
     public User(String email, String username, String password) {
         this.email = email;

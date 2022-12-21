@@ -1,4 +1,4 @@
-package mag.traficMap.model;
+package mag.traficMap.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,7 @@
 package mag.traficMap.repository;
 
 
-import mag.traficMap.model.User;
+import mag.traficMap.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

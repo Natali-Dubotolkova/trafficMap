@@ -1,4 +1,4 @@
-package mag.traficMap.model;
+package mag.traficMap.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
@@ -21,23 +21,25 @@ public class Traffic implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
-    private Float grade;
+    @Column(name = "grade", nullable = false, unique = true)
+    private int grade;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name ="street_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
     private Street street;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Street streetTo;
-
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name ="street_from", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+//    @JsonIgnore
     private Street streetFrom;
 
-    public Traffic(Float grade, Street street, Street streetTo, Street streetFrom) {
-        this.grade = grade;
-        this.street = street;
-        this.streetTo = streetTo;
-        this.streetFrom = streetFrom;
-    }
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name ="street_to", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+//    @JsonIgnore
+    private Street streetTo;
+
 }

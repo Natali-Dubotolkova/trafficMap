@@ -2,9 +2,9 @@ package mag.traficMap.controller;
 
 import mag.traficMap.authority.UserDetailsImpl;
 import mag.traficMap.config.jwt.JwtUtils;
-import mag.traficMap.model.ERole;
-import mag.traficMap.model.Role;
-import mag.traficMap.model.User;
+import mag.traficMap.entity.ERole;
+import mag.traficMap.entity.Role;
+import mag.traficMap.entity.User;
 import mag.traficMap.pojo.JwtResponse;
 import mag.traficMap.pojo.LoginRequest;
 import mag.traficMap.pojo.MessageResponse;

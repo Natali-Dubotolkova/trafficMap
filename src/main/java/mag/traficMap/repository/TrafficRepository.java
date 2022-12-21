@@ -1,12 +1,15 @@
 package mag.traficMap.repository;
 
-import mag.traficMap.model.Street;
-import mag.traficMap.model.Traffic;
-import mag.traficMap.model.User;
+import mag.traficMap.entity.Street;
+import mag.traficMap.entity.Traffic;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
+import java.util.List;
 
 public interface TrafficRepository extends JpaRepository<Traffic, Long> {
-    Optional<Traffic> findAllByStreet(Street street);
+    List<Traffic> findByStreetId(Long streetId);
+
+    void deleteById(Long id);
+
+    void deleteByStreet(Street street);
 }

@@ -1,7 +1,7 @@
 package mag.traficMap.repository;
 
-import mag.traficMap.model.ERole;
-import mag.traficMap.model.Role;
+import mag.traficMap.entity.ERole;
+import mag.traficMap.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

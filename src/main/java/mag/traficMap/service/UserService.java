@@ -1,6 +1,6 @@
 package mag.traficMap.service;
 
-import mag.traficMap.model.User;
+import mag.traficMap.entity.User;
 import mag.traficMap.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
