@@ -1,6 +1,6 @@
 package mag.traficMap.controller;
 
-import mag.traficMap.model.User;
+import mag.traficMap.entity.User;
 import mag.traficMap.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

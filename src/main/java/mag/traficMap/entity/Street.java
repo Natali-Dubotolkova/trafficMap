@@ -1,9 +1,10 @@
-package mag.traficMap.model;
+package mag.traficMap.entity;
 
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 
 @Getter
@@ -20,4 +21,8 @@ public class Street implements Serializable {
     private Long id;
     @Column(name = "title", unique = true, nullable = false)
     private String streetTitle;
+
+    public Street(String streetTitle) {
+        this.streetTitle = streetTitle;
+    }
 }

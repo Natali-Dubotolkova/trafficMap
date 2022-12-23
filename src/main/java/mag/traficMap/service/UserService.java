@@ -1,6 +1,6 @@
 package mag.traficMap.service;
 
-import mag.traficMap.model.User;
+import mag.traficMap.entity.User;
 import mag.traficMap.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +29,7 @@ public class UserService {
 
     public User updateUser(User user) {
         User existingUser = userRepository.findById(user.getId()).get();
-        existingUser.setLogin(user.getLogin());
+        existingUser.setUsername(user.getUsername());
         existingUser.setEmail(user.getEmail());
         return userRepository.save(existingUser);
     }
