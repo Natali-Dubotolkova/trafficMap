@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
+@CrossOrigin(origins= {"http://localhost:8081"}, maxAge = 4800, allowCredentials = "false" )
 @RestController
 @RequestMapping("/street")
 public class StreetController {
